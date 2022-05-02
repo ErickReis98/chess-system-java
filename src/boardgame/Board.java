@@ -25,7 +25,6 @@ public class Board {
 	public int getColumns() {
 		return columns;
 	}
-
 	
 	public Piece piece(int row, int column) {
 		if(!positionExists(row, column)){
@@ -45,7 +44,6 @@ public class Board {
 		if (thereIsAPiece(position)) {
 			throw new BoardException("Já existe uma peça nessa posição.");
 		}
-		
 		pieces[position.getRow()][position.getColumn()] = piece;
 		piece.position = position;
 	}
@@ -63,8 +61,7 @@ public class Board {
 		return aux;
 		
 	}
-	
-	
+		
 	public boolean positionExists(int row, int column) {
 			return row >=0 && row < rows && column >=0 && column < columns;
 		}
