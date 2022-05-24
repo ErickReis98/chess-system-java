@@ -40,8 +40,11 @@ public class Program {
 				}
 				
 				if(chessMatch.getPromoted() != null) {
-					System.out.print("Digite a letra referente a peça que deseja incluir: (B/N/R/Q))");
-					String type = sc.nextLine();
+					System.out.print("Digite a letra referente a peça que deseja incluir: (B/N/R/Q)");
+					String type = sc.nextLine().toUpperCase();
+					while(!type.equals("B") && !type.equals("N") && type.equals("R") && type.equals("Q")) {
+						 System.out.println("Valor inválido. Digite uma letra válida: (B/N/R/Q)");
+					}
 					chessMatch.replacePromotedPiece(type);
 				}
 			}
